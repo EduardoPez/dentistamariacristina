@@ -1,0 +1,417 @@
+/* Reset básico e configurações fundamentais */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+    background-color: #FAFAFA;
+    line-height: 1.6;
+}
+
+/* Paleta de Cores e Tipografia */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #0A2540;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Utilitários de Layout */
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+/* Sistemas de Grid puros substituindo flex complexos no corpo */
+.grid-2 {
+    display: table;
+    width: 100%;
+}
+.grid-2 > div {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+    padding: 20px;
+}
+
+.grid-3 {
+    display: block;
+    text-align: center;
+}
+.card {
+    display: inline-block;
+    width: 30%;
+    margin: 1.5%;
+    background: #FFFFFF;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    vertical-align: top;
+    text-align: left;
+    border-top: 4px solid #C5A880;
+}
+
+/* Elementos Estilizados */
+.top-bar {
+    background-color: #0A2540;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    padding: 8px 0;
+    font-weight: 300;
+}
+
+.main-header {
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.logo-text {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #0A2540;
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #C5A880;
+}
+
+.nav-menu a {
+    margin-left: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4A5568;
+}
+
+.nav-menu a:hover {
+    color: #C5A880;
+}
+
+.btn-nav {
+    background: #0A2540;
+    color: #FFFFFF !important;
+    padding: 8px 18px;
+    border-radius: 5px;
+}
+
+.btn-nav:hover {
+    background: #C5A880;
+}
+
+/* Seções */
+.section-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #C5A880;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-subtitle {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #718096;
+}
+
+/* Hero */
+.hero-section {
+    background: linear-gradient(135deg, #F0F4F8 0%, #E2E8F0 100%);
+    padding: 120px 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    color: #4A5568;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 5px;
+}
+
+.btn-primary {
+    background-color: #0A2540;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #C5A880;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #0A2540;
+    border: 2px solid #0A2540;
+}
+
+.btn-secondary:hover {
+    background-color: #0A2540;
+    color: #FFFFFF;
+}
+
+/* Sobre */
+.about-section {
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #4A5568;
+}
+
+.badges {
+    margin-top: 30px;
+}
+
+.badge-item {
+    display: inline-block;
+    background: #F7FAFC;
+    padding: 12px 20px;
+    border-left: 3px solid #C5A880;
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+.about-img-placeholder, .features-img-placeholder {
+    vertical-align: middle;
+}
+
+.image-box {
+    width: 100%;
+    height: 400px;
+    background: #E2E8F0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #718096;
+    font-size: 0.9rem;
+    border: 2px dashed #CBD5E0;
+}
+
+.image-box-dark {
+    width: 100%;
+    height: 350px;
+    background: #CBD5E0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4A5568;
+    font-size: 0.9rem;
+}
+
+/* Serviços */
+.services-section {
+    padding: 80px 0;
+    background: #F7FAFC;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    margin: 15px 0 10px 0;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #64748B;
+}
+
+.card-icon {
+    font-size: 2rem;
+}
+
+/* Diferenciais */
+.features-section {
+    padding: 80px 0;
+    background: #FFFFFF;
+}
+
+.features-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.features-list li {
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: #4A5568;
+}
+
+/* Contato e Form */
+.contact-section {
+    padding: 80px 0;
+    background: #F0F4F8;
+}
+
+.info-blocks {
+    margin-top: 30px;
+}
+
+.info-block {
+    margin-bottom: 20px;
+}
+
+.info-block strong {
+    color: #0A2540;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.link-highlight {
+    color: #128C7E;
+    font-weight: 600;
+}
+
+.contact-form-box {
+    background: #FFFFFF;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #4A5568;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CBD5E0;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #0A2540;
+}
+
+.btn-block {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+/* Rodapé */
+.main-footer {
+    background: #0A2540;
+    color: #A0AEC0;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+.footer-subtext {
+    font-size: 0.75rem;
+    margin-top: 10px;
+    color: #718096;
+}
+
+/* WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* Responsividade Básica via tabelas/blocos */
+@media (max-width: 768px) {
+    .grid-2 > div {
+        display: block;
+        width: 100%;
+    }
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-menu {
+        margin-top: 15px;
+    }
+    .nav-menu a {
+        margin: 0 10px;
+    }
+}
