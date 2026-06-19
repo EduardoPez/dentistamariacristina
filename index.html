@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dra. Maria Cristina Bertoletti | Odontologia Integrada</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Top Bar / Informações rápidas -->
     <div class="top-bar">
         <div class="container row-between">
             <span>📍 Atendimento com agendamento prévio</span>
@@ -20,7 +18,6 @@
         </div>
     </div>
 
-    <!-- Cabeçalho / Menu de Navegação -->
     <header class="main-header">
         <div class="container row-between navbar">
             <div class="logo">
@@ -38,8 +35,9 @@
     </header>
 
     <section id="inicio" class="hero-section">
-        <div class="container grid-2 align-center">
+        <div class="container grid-2">
             <div class="hero-content">
+                <span class="section-tag">Bem-vindo</span>
                 <h1>Sorriso e bem-estar</h1>
                 <p>Seja bem-vindo ao meu consultório, onde a harmonia do seu sorriso é o reflexo da minha dedicação.</p>
                 <p>Com sutileza e profissionalismo, valorizo cada detalhe do seu sorriso, porque sei que ele é parte essencial da sua qualidade de vida.</p>
@@ -48,12 +46,13 @@
                 </div>
             </div>
             <div class="hero-img-container">
-                <img src="foto-dra-cristina.jpg" alt="Dra. Maria Cristina" class="hero-profile-img">
+                <div class="image-box">
+                    <span>[Espaço para Foto da Dra. Maria Cristina]</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Sobre a Profissional -->
     <section id="sobre" class="about-section">
         <div class="container grid-2">
             <div class="about-text">
@@ -67,15 +66,13 @@
                 </div>
             </div>
             <div class="about-img-placeholder">
-                <!-- Espaço para foto da dentista -->
                 <div class="image-box">
-                    <span>[Inserir Foto da Dra. Maria Cristina aqui]</span>
+                    <span>[Inserir Foto Opcional Secundária]</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Tratamentos / Serviços -->
     <section id="tratamentos" class="services-section">
         <div class="container text-center">
             <span class="section-tag">Especialidades</span>
@@ -83,37 +80,31 @@
             <p class="section-subtitle">Soluções completas para devolver a estética, função e saúde do seu sorriso.</p>
             
             <div class="grid-3">
-                <!-- Card 1 -->
                 <div class="card">
                     <div class="card-icon">✨</div>
                     <h3>Odontologia Estética</h3>
                     <p>Facetas, lentes de contato dental e clareamento a laser para harmonizar seu sorriso com naturalidade.</p>
                 </div>
-                <!-- Card 2 -->
                 <div class="card">
                     <div class="card-icon">🦷</div>
                     <h3>Reabilitação Oral</h3>
                     <p>Tratamentos integrados para recuperar elementos dentários perdidos, devolvendo a mastigação e autoconfiança.</p>
                 </div>
-                <!-- Card 3 -->
                 <div class="card">
                     <div class="card-icon">🛡️</div>
                     <h3>Odontologia Preventiva</h3>
                     <p>Check-ups regulares, profilaxia e orientações personalizadas para evitar problemas futuros.</p>
                 </div>
-                <!-- Card 4 -->
                 <div class="card">
                     <div class="card-icon">💎</div>
                     <h3>Próteses Dentárias</h3>
                     <p>Soluções fixas ou removíveis confeccionadas com planejamento digital para máxima adaptação.</p>
                 </div>
-                <!-- Card 5 -->
                 <div class="card">
                     <div class="card-icon">🌿</div>
                     <h3>Periodontia</h3>
                     <p>Cuidados e tratamentos específicos para manter a saúde das gengivas e tecidos de suporte dos dentes.</p>
                 </div>
-                <!-- Card 6 -->
                 <div class="card">
                     <div class="card-icon">⚡</div>
                     <h3>Alinhadores Invisíveis</h3>
@@ -123,9 +114,8 @@
         </div>
     </section>
 
-    <!-- Seção Diferenciais e Infraestrutura -->
     <section id="diferenciais" class="features-section">
-        <div class="container grid-2 align-center">
+        <div class="container grid-2">
             <div class="features-img-placeholder">
                 <div class="image-box-dark">
                     <span>[Inserir Imagem do Consultório aqui]</span>
@@ -145,7 +135,6 @@
         </div>
     </section>
 
-    <!-- Seção Contato com Formulário Netlify Forms integrado -->
     <section id="contato" class="contact-section">
         <div class="container grid-2">
             <div class="contact-info">
@@ -170,9 +159,7 @@
             </div>
             
             <div class="contact-form-box">
-                <!-- Formulário com Atributo Nativo do Netlify para capturar dados sem precisar de PHP/banco -->
                 <form name="contato-clinica" method="POST" data-netlify="true" class="netlify-form">
-                    <!-- Campo oculto obrigatório se for usar em páginas estáticas estruturadas -->
                     <input type="hidden" name="form-name" value="contato-clinica" />
                     
                     <div class="form-group">
@@ -187,7 +174,7 @@
                     
                     <div class="form-group">
                         <label for="phone">Telefone / WhatsApp</label>
-                        <input type="tel" id="phone" name="telefone" placeholder="Ex: (00) 99999-9999" required>
+                        <input type="tel" id="phone" name="telefone" placeholder="Ex: (51) 99999-9999" required>
                     </div>
                     
                     <div class="form-group">
@@ -201,7 +188,6 @@
         </div>
     </section>
 
-    <!-- Rodapé -->
     <footer class="main-footer">
         <div class="container text-center">
             <p>&copy; 2026 Dra. Maria Cristina Bertoletti. Todos os direitos reservados.</p>
@@ -209,7 +195,6 @@
         </div>
     </footer>
 
-    <!-- Botão Flutuante do WhatsApp -->
     <a href="https://wa.me/5551999562211" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <svg viewBox="0 0 32 32" class="whatsapp-icon">
             <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825.733 5.483 2.017 7.792l-2.017 7.371 7.554-1.983c2.242 1.196 4.8 1.82 7.446 1.82 8.837 0 16-7.163 16-16s-7.163-16-16-16zm8.917 21.846c-.367 1.033-1.812 1.883-2.5 1.946-.621.058-1.408.092-2.287-.192-.533-.171-1.204-.417-2.054-.783-3.604-1.554-5.938-5.217-6.117-5.458-.175-.238-1.442-1.921-1.442-3.667 0-1.746.908-2.604 1.233-2.958.321-.35.704-.442.938-.442.233 0 .467.004.671.013.208.008.492-.079.767.588.283.692.975 2.379 1.058 2.546.083.171.138.371.025.596-.117.229-.25.371-.396.542-.146.171-.308.358-.442.483-.15.138-.308.288-.133.592.175.296.779 1.288 1.671 2.083.15.133.292.25.421.35.808.625 1.55.854 1.912.983.358.129.571.042.783-.167.217-.213.929-1.079 1.179-1.45.25-.371.5-.313.842-.188.342.125 2.167 1.021 2.538 1.204.371.183.617.271.704.421.088.15.088.867-.279 1.9z" fill="#FFF"/>
@@ -218,4 +203,3 @@
 
 </body>
 </html>
- 
