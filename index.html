@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
-        /* Ajustes de Estilo para Imagens e Cards */
+        /* Ajustes de Estilo para Imagens e Layout */
         .hero-img-container, .about-img-container, .features-img-container {
             border-radius: 20px;
             overflow: hidden;
@@ -21,6 +21,21 @@
             object-fit: cover;
             display: block;
         }
+
+        /* CORREÇÃO: Título em uma única linha */
+        .hero-content h1 {
+            white-space: nowrap; /* Impede a quebra de linha */
+            font-size: clamp(2rem, 3.8vw, 3.5rem); /* Ajusta o tamanho conforme a tela */
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                white-space: normal; /* Permite quebra apenas no celular para não cortar */
+                font-size: 2.2rem;
+            }
+        }
+        
         .grid-3 {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,7 +178,6 @@
                 </div>
             </div>
             <div class="contact-form-box">
-                <!-- ATENÇÃO: Atributo action="/sucesso.html" adicionado abaixo -->
                 <form name="contato-clinica" method="POST" data-netlify="true" action="/sucesso.html" class="netlify-form">
                     <input type="hidden" name="form-name" value="contato-clinica" />
                     <div class="form-group">
