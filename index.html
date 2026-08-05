@@ -8,6 +8,75 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        /* Ajustes de Estilo para Imagens e Cards */
+        .hero-img-container, .about-img-container, .features-img-container {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .img-responsive {
+            width: 100%;
+            height: 400px; /* Altura fixa para manter harmonia */
+            object-fit: cover; /* Corta a imagem para preencher o espaço sem distorcer */
+            display: block;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px 0;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden; /* Garante que o zoom da imagem não saia do card */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img-wrapper {
+            width: 100%;
+            height: 200px; /* Altura fixa para as fotos dos tratamentos */
+            overflow: hidden;
+        }
+
+        .card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-img {
+            transform: scale(1.1); /* Zoom suave e controlado */
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+    </style>
 </head>
 <body>
     <div class="top-bar">
@@ -70,65 +139,95 @@
             <span class="section-tag">Especialidades</span>
             <h2>Tratamentos Personalizados</h2>
             <div class="grid-3">
+                <!-- Card 1 -->
                 <div class="card">
-                    <img src="Clareamento - antes e depois.jpeg" alt="Clareamento Dental" class="card-img">
-                    <h3>Odontologia Estética</h3>
-                    <p>Clareamento e estética para um sorriso radiante.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Clareamento - antes e depois.jpeg" alt="Clareamento Dental" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Odontologia Estética</h3>
+                        <p>Clareamento e estética para um sorriso radiante.</p>
+                    </div>
                 </div>
+                <!-- Card 2 -->
                 <div class="card">
-                    <img src="Faceta e lente de contato dental.jpg" alt="Lentes de Contato" class="card-img">
-                    <h3>Facetas e Lentes</h3>
-                    <p>Transformação estética com naturalidade.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Faceta e lente de contato dental.jpg" alt="Lentes de Contato" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Facetas e Lentes</h3>
+                        <p>Transformação estética com naturalidade.</p>
+                    </div>
                 </div>
+                <!-- Card 3 -->
                 <div class="card">
-                    <img src="Profilaxia - limpeza.jpeg" alt="Profilaxia" class="card-img">
-                    <h3>Odontologia Preventiva</h3>
-                    <p>Check-ups e limpeza para manter sua saúde bucal.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Profilaxia - limpeza.jpeg" alt="Profilaxia" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Odontologia Preventiva</h3>
+                        <p>Check-ups e limpeza para manter sua saúde bucal.</p>
+                    </div>
                 </div>
+                <!-- Card 4 -->
                 <div class="card">
-                    <img src="Prótese dentaria.jpg" alt="Próteses" class="card-img">
-                    <h3>Próteses Dentárias</h3>
-                    <p>Reabilitação funcional e estética de qualidade.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Prótese dentaria.jpg" alt="Próteses" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Próteses Dentárias</h3>
+                        <p>Reabilitação funcional e estética de qualidade.</p>
+                    </div>
                 </div>
+                <!-- Card 5 -->
                 <div class="card">
-                    <img src="Ortodontia.jpg" alt="Ortodontia" class="card-img">
-                    <h3>Ortodontia</h3>
-                    <p>Alinhamento do sorriso com técnicas modernas.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Ortodontia.jpg" alt="Ortodontia" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ortodontia</h3>
+                        <p>Alinhamento do sorriso com técnicas modernas.</p>
+                    </div>
                 </div>
+                <!-- Card 6 -->
                 <div class="card">
-                    <img src="Implante dentario.jpg" alt="Implantes" class="card-img">
-                    <h3>Implantes Dentários</h3>
-                    <p>Segurança e durabilidade na reposição dentária.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Implante dentario.jpg" alt="Implantes" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Implantes Dentários</h3>
+                        <p>Segurança e durabilidade na reposição dentária.</p>
+                    </div>
                 </div>
+                <!-- Card 7 -->
                 <div class="card">
-                    <img src="Tratamento de canal - indicada pela Cris.jpg" alt="Endodontia" class="card-img">
-                    <h3>Tratamento de Canal</h3>
-                    <p>Endodontia precisa para preservar seus dentes.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Tratamento de canal - indicada pela Cris.jpg" alt="Endodontia" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tratamento de Canal</h3>
+                        <p>Endodontia precisa para preservar seus dentes.</p>
+                    </div>
                 </div>
+                <!-- Card 8 -->
                 <div class="card">
-                    <img src="Radiologia digital.jpeg" alt="Radiologia" class="card-img">
-                    <h3>Radiologia Digital</h3>
-                    <p>Exames precisos com tecnologia avançada.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Radiologia digital.jpeg" alt="Radiologia" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Radiologia Digital</h3>
+                        <p>Exames precisos com tecnologia avançada.</p>
+                    </div>
                 </div>
+                <!-- Card 9 -->
                 <div class="card">
-                    <img src="Gengivoplastia.jpeg" alt="Gengivoplastia" class="card-img">
-                    <h3>Gengivoplastia</h3>
-                    <p>Harmonização do contorno gengival.</p>
-                </div>
-                <div class="card">
-                    <img src="Extração dentária.jpeg" alt="Extração" class="card-img">
-                    <h3>Cirurgias e Extrações</h3>
-                    <p>Procedimentos seguros e humanizados.</p>
-                </div>
-                <div class="card">
-                    <img src="Dentistica restauradora.jpg" alt="Restaurações" class="card-img">
-                    <h3>Dentística Restauradora</h3>
-                    <p>Recuperação da forma e função dos dentes.</p>
-                </div>
-                <div class="card">
-                    <img src="Placa de bruxismo.jpeg" alt="Bruxismo" class="card-img">
-                    <h3>Placa de Bruxismo</h3>
-                    <p>Proteção e conforto para sua articulação.</p>
+                    <div class="card-img-wrapper">
+                        <img src="Gengivoplastia.jpeg" alt="Gengivoplastia" class="card-img">
+                    </div>
+                    <div class="card-content">
+                        <h3>Gengivoplastia</h3>
+                        <p>Harmonização do contorno gengival.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -163,8 +262,8 @@
                         <p>Rua Padre Chagas, 147 - sala 503 - Moinhos de Vento - Porto Alegre/RS</p>
                     </div>
                     <div class="info-block">
-                        <strong>💬 WhatsApp:</strong>
-                        <p><a href="https://wa.me/5551999562211" target="_blank" class="link-highlight">Clique aqui para abrir</a></p>
+                        <strong>💬 WhatsApp Direto:</strong>
+                        <p><a href="https://wa.me/5551999562211" target="_blank" class="link-highlight">Clique aqui para abrir o WhatsApp</a></p>
                     </div>
                 </div>
             </div>
@@ -176,8 +275,16 @@
                         <input type="text" id="name" name="nome" required>
                     </div>
                     <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
                         <label for="phone">Telefone / WhatsApp</label>
                         <input type="tel" id="phone" name="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem ou Preferência de Horário</label>
+                        <textarea id="message" name="mensagem" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
                 </form>
