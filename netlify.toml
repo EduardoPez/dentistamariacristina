@@ -1,0 +1,27 @@
+# Site estático: não há etapa de build, a Netlify publica a pasta raiz.
+[build]
+  publish = "."
+
+# Endereços do site antigo (Hostinger) apontam para as seções equivalentes,
+# para que links salvos e resultados do Google continuem funcionando.
+[[redirects]]
+  from = "/procedimentos"
+  to = "/#tratamentos"
+  status = 301
+
+[[redirects]]
+  from = "/contato"
+  to = "/#contato"
+  status = 301
+
+# Imagens em cache por 30 dias no navegador dos visitantes.
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
