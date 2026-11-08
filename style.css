@@ -1,503 +1,388 @@
 /* ==========================================================================
-   1. VARIÁVEIS DE COR E CONFIGURAÇÕES FUNDAMENTAIS (Design Clean & Premium)
+   Dra. Maria Cristina Bertoletti — folha de estilos única do site
    ========================================================================== */
+
+/* 1. Cores e base
+   ----------------------------------------------------------------------- */
 :root {
-    --bg-principal: #FCFAF7;       /* Off-white perolado, traz leveza e respiro */
-    --bg-subtil: #F3ECE3;          /* Champagne/Almond suave para blocos e topo */
-    --cor-texto: #2F3E46;          /* Cinza grafite editorial (moderno e legível) */
-    --cor-texto-mutado: #6C7A81;   /* Cinza médio para subtítulos */
-    --cor-destaque: #BA9173;       /* Destaque Nude/Muted Gold inspirado no logo */
-    --cor-destaque-hover: #A37B5F; /* Variação do dourado para interação do mouse */
+    --bg-principal: #FCFAF7;       /* off-white perolado */
+    --bg-subtil: #F3ECE3;          /* champagne suave */
+    --cor-texto: #2F3E46;          /* grafite */
+    --cor-texto-mutado: #5F6E75;   /* cinza para textos secundários */
+    --cor-destaque: #BA9173;       /* nude / dourado do logo */
+    --cor-destaque-escura: #8F6A4F;/* dourado escuro (texto legível) */
+    --raio: 20px;
+    --sombra: 0 12px 32px rgba(47, 62, 70, 0.06);
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 16px;
-}
+html { scroll-behavior: smooth; font-size: 16px; scroll-padding-top: 90px; }
 
 body {
     background-color: var(--bg-principal);
     color: var(--cor-texto);
     font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
-/* Tipografia */
-h1, h2, h3 {
+img { max-width: 100%; display: block; }
+
+h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     color: var(--cor-texto);
-    margin-bottom: 1.2rem;
     font-weight: 600;
+    line-height: 1.2;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-}
+h2 { font-size: clamp(1.9rem, 3vw, 2.5rem); margin-bottom: 1.2rem; }
 
-/* ==========================================================================
-   2. UTILITÁRIOS DE LAYOUT (Modernizados com CSS Grid & Flexbox)
-   ========================================================================== */
-.container {
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 24px;
-}
+a { text-decoration: none; color: inherit; transition: color 0.25s ease, background 0.25s ease, transform 0.25s ease; }
 
-.row-between {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+ul { list-style: none; }
 
-.text-center {
-    text-align: center;
-}
+/* 2. Layout
+   ----------------------------------------------------------------------- */
+.container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
-.align-center {
-    display: flex;
-    align-items: center;
-}
+.row-between { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
 
-/* Grid de 2 Colunas (Hero, Sobre, Consultório e Contato) */
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-}
+.text-center { text-align: center; }
 
-/* Grid de 3 Colunas (Cards de Tratamentos) */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
 }
 
-/* Cards de Serviços Modernos */
-.card {
-    background: #FFFFFF;
-    padding: 40px 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
-    border: 1px solid rgba(0, 0, 0, 0.01);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-    border-top: 4px solid var(--cor-destaque);
-}
+section { padding: 96px 0; }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(186, 145, 115, 0.08);
-}
-
-/* ==========================================================================
-   3. CABEÇALHO E MENU DE NAVEGAÇÃO
-   ========================================================================== */
-.top-bar {
-    background-color: var(--bg-subtil);
-    color: var(--cor-texto);
-    font-size: 0.85rem;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.02);
-}
-
-.main-header {
-    background-color: var(--bg-principal);
-    padding: 24px 0;
-}
-
-.logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.9rem;
-    color: var(--cor-texto);
-    display: block;
-    letter-spacing: 0.5px;
-    line-height: 1.1;
-}
-
-.logo-sub {
-    font-size: 0.72rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: var(--cor-destaque);
-    margin-top: 4px;
-    display: block;
-    font-weight: 500;
-}
-
-.nav-menu a {
-    margin-left: 30px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--cor-texto);
-    position: relative;
-}
-
-.nav-menu a:hover {
-    color: var(--cor-destaque);
-}
-
-/* Botão de Agendamento no Menu */
-.btn-nav {
-    background: var(--cor-texto);
-    color: #FFFFFF !important;
-    padding: 10px 22px;
-    border-radius: 50px;
-    font-weight: 500;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.btn-nav:hover {
-    background: var(--cor-destaque);
-    transform: translateY(-1px);
-}
-
-/* ==========================================================================
-   4. SEÇÕES, HERO E COMPONENTES VISUAIS
-   ========================================================================== */
 .section-tag {
     display: inline-block;
     font-size: 0.78rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--cor-destaque);
+    color: var(--cor-destaque-escura);
     margin-bottom: 12px;
     font-weight: 600;
 }
 
 .section-subtitle {
     max-width: 600px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 16px;
     color: var(--cor-texto-mutado);
     font-size: 1.05rem;
 }
 
-/* Seção Hero Principal (Estilo Minimalista Quente) */
-.hero-section {
-    background: linear-gradient(180deg, var(--bg-subtil) 0%, var(--bg-principal) 100%);
-    padding: 100px 0;
+/* 3. Topo e menu
+   ----------------------------------------------------------------------- */
+.top-bar {
+    background-color: var(--bg-subtil);
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 9px 0;
 }
 
-.hero-content {
-    text-align: left;
+.top-bar-links { display: flex; gap: 20px; }
+.top-bar-links a:hover { color: var(--cor-destaque-escura); }
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: rgba(252, 250, 247, 0.96);
+    backdrop-filter: blur(6px);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(47, 62, 70, 0.06);
 }
 
-.hero-content h1 {
-    font-size: 3.6rem;
-    line-height: 1.15;
-    color: var(--cor-texto);
-    margin-bottom: 24px;
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.55rem;
+    display: block;
+    line-height: 1.1;
 }
 
-.hero-content p {
-    font-size: 1.1rem;
-    color: var(--cor-texto-mutado);
-    margin-bottom: 20px;
-    max-width: 540px;
+.logo-sub {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--cor-destaque-escura);
+    margin-top: 4px;
+    display: block;
+    font-weight: 500;
 }
 
-/* Botões Gerais */
+.nav-menu { display: flex; align-items: center; gap: 28px; }
+
+.nav-menu a { font-size: 0.93rem; font-weight: 500; }
+.nav-menu a:hover { color: var(--cor-destaque-escura); }
+
+.nav-menu .btn-nav {
+    background: var(--cor-texto);
+    color: #FFFFFF;
+    padding: 10px 22px;
+    border-radius: 50px;
+}
+.nav-menu .btn-nav:hover { background: var(--cor-destaque-escura); color: #FFFFFF; }
+
+/* 4. Botões
+   ----------------------------------------------------------------------- */
 .btn {
     display: inline-block;
-    padding: 14px 36px;
+    padding: 14px 32px;
     border-radius: 50px;
     font-weight: 500;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .btn-primary {
-    background-color: var(--cor-destaque);
+    background-color: var(--cor-destaque-escura);
     color: #FFFFFF;
-    box-shadow: 0 6px 20px rgba(186, 145, 115, 0.25);
+    box-shadow: 0 6px 20px rgba(143, 106, 79, 0.25);
+}
+.btn-primary:hover { background-color: var(--cor-texto); transform: translateY(-2px); }
+
+.btn-secondary { border-color: var(--cor-texto); color: var(--cor-texto); }
+.btn-secondary:hover { background-color: var(--cor-texto); color: #FFFFFF; transform: translateY(-2px); }
+
+.btn-block { width: 100%; }
+
+/* 5. Início
+   ----------------------------------------------------------------------- */
+.hero-section {
+    background: linear-gradient(180deg, var(--bg-subtil) 0%, var(--bg-principal) 100%);
+    padding: 88px 0 96px;
 }
 
-.btn-primary:hover {
-    background-color: var(--cor-destaque-hover);
-    transform: translateY(-2px);
-}
+.hero-content h1 { font-size: clamp(2.4rem, 4.5vw, 3.6rem); margin-bottom: 24px; }
 
-.btn-secondary {
-    background-color: transparent;
-    color: var(--cor-texto);
-    border: 1px solid var(--cor-texto);
-}
-
-.btn-secondary:hover {
-    background-color: var(--cor-texto);
-    color: #FFFFFF;
-    transform: translateY(-2px);
-}
-
-/* Seção Sobre Nós */
-.about-section {
-    padding: 100px 0;
-    background: var(--bg-principal);
-}
-
-.about-text p {
-    margin-bottom: 24px;
+.hero-content p {
+    font-size: 1.08rem;
     color: var(--cor-texto-mutado);
-    font-size: 1.05rem;
+    margin-bottom: 18px;
+    max-width: 520px;
 }
 
-.badges {
-    margin-top: 35px;
-    display: flex;
-    gap: 20px;
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px; }
+
+.hero-img img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 200px 200px var(--raio) var(--raio);
+    box-shadow: var(--sombra);
 }
+
+/* 6. Sobre
+   ----------------------------------------------------------------------- */
+.about-text p { margin-bottom: 18px; color: var(--cor-texto-mutado); font-size: 1.05rem; }
+
+.badges { display: grid; gap: 16px; }
 
 .badge-item {
     background: #FFFFFF;
-    padding: 16px 24px;
-    border-radius: 12px;
+    padding: 22px 26px;
+    border-radius: 14px;
     border-left: 4px solid var(--cor-destaque);
-    font-size: 0.9rem;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+    box-shadow: var(--sombra);
+}
+.badge-item strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.25rem; font-weight: 600; }
+.badge-item span { color: var(--cor-texto-mutado); font-size: 0.92rem; }
+
+/* 7. Tratamentos
+   ----------------------------------------------------------------------- */
+.services-section { background: #FFFFFF; }
+
+.group-title {
+    font-size: 1.35rem;
+    margin: 56px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--bg-subtil);
 }
 
-/* Containers de Imagem com Bordas Arredondadas Premium (Padrão Hostinger) */
-.about-img-placeholder img, 
-.features-img-placeholder img,
-.hero-img-container img {
-    width: 100%;
-    max-width: 480px;
-    height: auto;
-    border-radius: 40px; /* Entrega o efeito arredondado idêntico à foto dela */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
-    display: block;
-    margin: 0 auto;
-}
-
-/* Caixas de marcação cinza temporárias enquanto não há fotos reais */
-.image-box, .image-box-dark {
-    width: 100%;
-    height: 420px;
-    background: var(--bg-subtil);
-    border-radius: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--cor-texto-mutado);
-    font-size: 0.9rem;
-    border: 2px dashed rgba(0,0,0,0.05);
-}
-
-/* Seção Serviços */
-.services-section {
-    padding: 100px 0;
-    background: #FFFFFF;
-}
-
-.card h3 {
-    font-size: 1.3rem;
-    margin: 20px 0 12px 0;
-}
-
-.card p {
-    font-size: 0.95rem;
-    color: var(--cor-texto-mutado);
-    line-height: 1.6;
-}
-
-.card-icon {
-    font-size: 2.2rem;
-    display: inline-block;
-}
-
-/* Seção Diferenciais */
-.features-section {
-    padding: 100px 0;
+.card {
     background: var(--bg-principal);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(47, 62, 70, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.card:hover { transform: translateY(-6px); box-shadow: var(--sombra); }
 
-.features-list {
-    list-style: none;
-    margin-top: 25px;
-}
+.card-img { width: 100%; height: 180px; object-fit: cover; transition: transform 0.6s ease; }
+.card:hover .card-img { transform: scale(1.06); }
 
+.card-content { padding: 20px 22px 24px; }
+.card-content h4 { font-size: 1.15rem; margin-bottom: 8px; }
+.card-content p { font-size: 0.93rem; color: var(--cor-texto-mutado); line-height: 1.55; }
+
+/* 8. Consultório
+   ----------------------------------------------------------------------- */
+.features-img img { width: 100%; height: 440px; object-fit: cover; border-radius: var(--raio); box-shadow: var(--sombra); }
+
+.features-list { margin-top: 24px; }
 .features-list li {
+    position: relative;
+    padding-left: 32px;
     margin-bottom: 16px;
     font-weight: 500;
-    color: var(--cor-texto);
-    display: flex;
-    align-items: center;
-    gap: 10px;
+}
+.features-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--cor-destaque-escura);
+    font-weight: 700;
 }
 
-/* Seção Contato */
-.contact-section {
-    padding: 100px 0;
-    background: var(--bg-subtil);
-}
+/* 9. Contato
+   ----------------------------------------------------------------------- */
+.contact-section { background: var(--bg-subtil); }
+.contact-section .grid-2 { align-items: start; }
 
-.info-blocks {
-    margin-top: 35px;
-}
+.contact-intro { color: var(--cor-texto-mutado); margin-bottom: 28px; }
 
-.info-block {
-    margin-bottom: 25px;
-}
-
-.info-block strong {
-    color: var(--cor-texto);
+.info-blocks li { margin-bottom: 20px; }
+.info-blocks strong {
     display: block;
-    margin-bottom: 6px;
-    font-size: 1.05rem;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--cor-destaque-escura);
+    margin-bottom: 4px;
 }
+.info-blocks a { font-weight: 500; }
+.info-blocks a:hover { color: var(--cor-destaque-escura); }
 
-.info-block p {
-    color: var(--cor-texto-mutado);
-}
+.map { margin-top: 28px; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra); }
+.map iframe { display: block; width: 100%; height: 260px; border: 0; }
 
-.link-highlight {
-    color: #128C7E;
-    font-weight: 600;
-}
-
-/* Caixa do Formulário Clean */
 .contact-form-box {
     background: #FFFFFF;
-    padding: 45px;
+    padding: 40px;
     border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+    box-shadow: var(--sombra);
 }
+.contact-form-box h3 { font-size: 1.5rem; margin-bottom: 24px; }
 
-.form-group {
-    margin-bottom: 24px;
-}
-
+.form-group { margin-bottom: 20px; }
 .form-group label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 600;
     margin-bottom: 8px;
-    color: var(--cor-texto);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .form-group input, .form-group textarea {
     width: 100%;
-    padding: 14px;
+    padding: 13px 14px;
     border: 1px solid #E2E8F0;
     background-color: #F8FAFC;
     border-radius: 8px;
     font-family: inherit;
     font-size: 0.95rem;
     color: var(--cor-texto);
-    transition: all 0.3s ease;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-
 .form-group input:focus, .form-group textarea:focus {
     outline: none;
     border-color: var(--cor-destaque);
     background-color: #FFFFFF;
-    box-shadow: 0 0 0 3px rgba(186, 145, 115, 0.1);
+    box-shadow: 0 0 0 3px rgba(186, 145, 115, 0.15);
 }
 
-.btn-block {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-}
+.form-note { margin-top: 14px; font-size: 0.8rem; color: var(--cor-texto-mutado); text-align: center; }
 
-/* ==========================================================================
-   5. RODAPÉ E COMPONENTES FIXOS
-   ========================================================================== */
-.main-footer {
-    background: var(--cor-texto);
-    color: #CBD5E1;
-    padding: 50px 0;
-    font-size: 0.9rem;
-}
+.hidden-field { position: absolute; left: -9999px; }
 
-.main-footer p {
-    margin-bottom: 8px;
-}
+/* 10. Rodapé e WhatsApp
+   ----------------------------------------------------------------------- */
+.main-footer { background: var(--cor-texto); color: #CBD5E1; padding: 56px 0 28px; font-size: 0.9rem; }
 
-.footer-subtext {
+.footer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.footer-name { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: #FFFFFF; }
+.main-footer a:hover { color: #FFFFFF; }
+
+.footer-copy {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.78rem;
-    margin-top: 15px;
     color: #94A3B8;
 }
 
-/* Botão Flutuante do WhatsApp */
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 40px;
-    right: 40px;
+    bottom: 32px;
+    right: 32px;
     background-color: #25D366;
-    color: #FFF;
     border-radius: 50%;
-    text-align: center;
-    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s ease;
 }
+.whatsapp-float:hover { transform: scale(1.08); background-color: #1EBE5A; }
+.whatsapp-float svg { width: 32px; height: 32px; fill: #FFFFFF; }
 
-.whatsapp-float:hover {
-    transform: scale(1.08);
-}
-
-.whatsapp-icon {
-    width: 32px;
-    height: 32px;
-}
-
-/* ==========================================================================
-   6. RESPONSIVIDADE (Ajuste perfeito para celulares e tablets)
-   ========================================================================== */
+/* 11. Celular e tablet
+   ----------------------------------------------------------------------- */
 @media (max-width: 992px) {
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-    .hero-content {
-        text-align: center;
-    }
-    .hero-content p {
-        margin: 0 auto 24px auto;
-    }
+    .grid-2 { grid-template-columns: 1fr; gap: 48px; }
+    .hero-content { text-align: center; }
+    .hero-content p { margin-left: auto; margin-right: auto; }
+    .hero-buttons { justify-content: center; }
+    .hero-img { order: -1; }
+    .hero-img img { max-width: 300px; }
+    .features-img img { height: 320px; }
 }
 
 @media (max-width: 768px) {
-    html {
-        font-size: 15px;
-    }
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-    .nav-menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    .nav-menu a {
-        margin: 0;
-    }
-    .badges {
-        flex-direction: column;
-    }
+    html { font-size: 15px; scroll-padding-top: 20px; }
+    section { padding: 72px 0; }
+    .top-bar .row-between { flex-direction: column; gap: 4px; text-align: center; }
+    .main-header { position: static; }
+    .navbar { flex-direction: column; text-align: center; }
+    .nav-menu { flex-wrap: wrap; justify-content: center; gap: 14px 20px; }
+    .nav-menu .btn-nav { flex-basis: 100%; text-align: center; max-width: 260px; margin: 4px auto 0; }
+    .contact-form-box { padding: 28px 22px; }
+    .footer-grid { grid-template-columns: 1fr; text-align: center; gap: 20px; }
+    .main-footer { padding-bottom: 90px; }
+    .whatsapp-float { width: 54px; height: 54px; bottom: 20px; right: 20px; }
 }
+
+/* 12. Páginas simples (mensagem enviada e erro 404)
+   ----------------------------------------------------------------------- */
+.page-simple {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: linear-gradient(180deg, var(--bg-subtil) 0%, var(--bg-principal) 100%);
+}
+.simple-box {
+    max-width: 560px;
+    background: #FFFFFF;
+    padding: 48px 40px;
+    border-radius: 24px;
+    box-shadow: var(--sombra);
+    text-align: center;
+}
+.simple-box h1 { font-size: 2.2rem; margin-bottom: 16px; }
+.simple-box p { color: var(--cor-texto-mutado); margin-bottom: 14px; }
+.simple-box p a { color: var(--cor-destaque-escura); font-weight: 600; }
+.simple-box .btn { margin-top: 16px; }

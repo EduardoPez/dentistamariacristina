@@ -3,302 +3,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dra. Maria Cristina Bertoletti | Odontologia Integrada</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dra. Maria Cristina Bertoletti | Dentista no Moinhos de Vento, Porto Alegre</title>
+    <meta name="description" content="Consultório odontológico da Dra. Maria Cristina Bertoletti (CRO-RS 12396) no Moinhos de Vento, Porto Alegre. Mais de 20 anos de trajetória em estética, implantes, próteses, ortodontia e prevenção. Agende sua consulta.">
+    <link rel="canonical" href="https://mariacristinabertoletti.com.br/">
+    <meta name="theme-color" content="#2F3E46">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <!-- Compartilhamento em redes sociais e WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Dra. Maria Cristina Bertoletti | Odontologia">
+    <meta property="og:description" content="Atendimento odontológico personalizado no Moinhos de Vento, Porto Alegre. Mais de 20 anos de trajetória.">
+    <meta property="og:url" content="https://mariacristinabertoletti.com.br/">
+    <meta property="og:image" content="https://mariacristinabertoletti.com.br/img/consultorio.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* --- AJUSTES DE HARMONIA E ÍCONES --- */
-        
-        .hero-img-container, .about-img-container, .features-img-container {
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-        
-        .img-responsive {
-            width: 100%;
-            height: 500px;
-            object-fit: cover;
-            display: block;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        .hero-content h1 {
-            white-space: nowrap;
-            font-size: clamp(2rem, 3.8vw, 3.5rem);
-            margin-bottom: 25px;
-            color: #2c3e50;
-        }
-
-        .hero-content p {
-            margin-bottom: 18px;
-            line-height: 1.7;
-            color: #555;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            padding: 30px 0;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover { transform: translateY(-8px); }
-        .card-img-wrapper { width: 100%; height: 180px; overflow: hidden; }
-        .card-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
-        .card:hover .card-img { transform: scale(1.1); }
-        .card-content { padding: 20px; }
-
-        /* Harmonização do Formulário */
-        .contact-form-box {
-            max-width: 460px;
-            width: 100%;
-            margin-left: auto;
-            padding: 35px;
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
-        }
-
-        /* CORREÇÃO: Estilo do Botão WhatsApp Flutuante */
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.3s ease;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-        }
-
-        .whatsapp-icon-svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-        }
-
-        @media (max-width: 992px) {
-            .hero-content h1 { white-space: normal; font-size: 2.5rem; }
-            .contact-form-box { margin: 30px auto 0; }
-            .img-responsive { height: 380px; }
-            .whatsapp-float { width: 50px; height: 50px; bottom: 20px; right: 20px; }
-        }
-    </style>
+    <!-- Dados estruturados para o Google (ficha do consultório) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Dra. Maria Cristina Bertoletti",
+      "url": "https://mariacristinabertoletti.com.br/",
+      "image": "https://mariacristinabertoletti.com.br/img/consultorio.jpg",
+      "telephone": "+55-51-99956-2211",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Padre Chagas, 147 - sala 503",
+        "addressLocality": "Porto Alegre",
+        "addressRegion": "RS",
+        "addressCountry": "BR"
+      },
+      "sameAs": ["https://www.instagram.com/mcbertoletti"]
+    }
+    </script>
 </head>
 <body>
     <div class="top-bar">
         <div class="container row-between">
-            <span>📍 Atendimento com agendamento prévio</span>
-            <span>📞 Contato: (51) 99956-2211</span>
+            <span>Atendimento com hora marcada · Moinhos de Vento, Porto Alegre</span>
+            <span class="top-bar-links">
+                <a href="tel:+5551999562211">(51) 99956-2211</a>
+                <a href="https://www.instagram.com/mcbertoletti" target="_blank" rel="noopener">@mcbertoletti</a>
+            </span>
         </div>
     </div>
-    
+
     <header class="main-header">
         <div class="container row-between navbar">
-            <div class="logo">
-                <span class="logo-text">Dra. Maria Cristina</span>
-                <span class="logo-sub">Bertoletti • Odontologia</span>
-            </div>
-            <nav class="nav-menu">
-                <a href="#inicio">Início</a>
+            <a href="#inicio" class="logo">
+                <span class="logo-text">Dra. Maria Cristina Bertoletti</span>
+                <span class="logo-sub">Odontologia · CRO-RS 12396</span>
+            </a>
+            <nav class="nav-menu" aria-label="Menu principal">
                 <a href="#sobre">Sobre</a>
-                <a href="#tratamentos">Procedimentos</a>
-                <a href="#diferenciais">O Consultório</a>
-                <a href="#contato" class="btn-nav">Agendar Consulta</a>
+                <a href="#tratamentos">Tratamentos</a>
+                <a href="#consultorio">O Consultório</a>
+                <a href="#contato">Contato</a>
+                <a href="#contato" class="btn-nav">Agendar consulta</a>
             </nav>
         </div>
     </header>
 
-    <section id="inicio" class="hero-section">
-        <div class="container grid-2">
-            <div class="hero-content">
-                <span class="section-tag">Bem-vindo</span>
-                <h1>Sorriso e bem-estar</h1>
-                <p>Seja bem-vindo ao meu consultório, onde a harmonia do seu sorriso é o reflexo da minha dedicação.</p>
-                <p>Com sutileza e profissionalismo, valorizo cada detalhe do seu sorriso, porque sei que ele é parte essencial da sua essência.</p>
-                <p>Minha missão é oferecer um atendimento que combine técnica apurada com o cuidado que você merece, garantindo que sua experiência seja tranquila e repleta de bem-estar.</p>
-                <p>Acredito na beleza de um sorriso genuíno e na importância de mantê-lo saudável e que irradie sua confiança natural.</p>
-                <div class="hero-buttons">
-                    <a href="#contato" class="btn btn-primary">Solicitar Agendamento</a>
+    <main>
+        <section id="inicio" class="hero-section">
+            <div class="container grid-2">
+                <div class="hero-content">
+                    <span class="section-tag">Seja bem-vindo</span>
+                    <h1>Sorriso e bem-estar</h1>
+                    <p>No meu consultório, a harmonia do seu sorriso é o reflexo da minha dedicação. Valorizo cada detalhe, porque sei que o sorriso é parte essencial de quem você é.</p>
+                    <p>Minha missão é unir técnica apurada ao cuidado que você merece, para que cada consulta seja tranquila e confortável.</p>
+                    <div class="hero-buttons">
+                        <a href="#contato" class="btn btn-primary">Agendar consulta</a>
+                        <a href="#tratamentos" class="btn btn-secondary">Ver tratamentos</a>
+                    </div>
+                </div>
+                <div class="hero-img">
+                    <img src="img/dra-maria-cristina.jpg" alt="Dra. Maria Cristina Bertoletti, cirurgiã-dentista" width="503" height="755">
                 </div>
             </div>
-            <div class="hero-img-container">
-                <img src="Foto Maria Cristina.jpg" alt="Dra. Maria Cristina Bertoletti" class="img-responsive">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="sobre" class="about-section">
-        <div class="container grid-2">
-            <div class="about-text">
-                <span class="section-tag">Dedicada ao seu Sorriso</span>
-                <h2>Sobre a Dra. Maria Cristina Bertoletti</h2>
-                <p>Com ampla experiência e constante atualização profissional, a Dra. Maria Cristina Bertoletti atua com foco nas reais necessidades de cada paciente. Acredita que a odontologia moderna trata de construir uma relação de confiança e empatia.</p>
-                <div class="badges">
-                    <div class="badge-item"><strong>+20 Anos</strong> de Trajetória</div>
-                    <div class="badge-item">Materiais de <strong>Alta Performance</strong></div>
+        <section id="sobre" class="about-section">
+            <div class="container grid-2">
+                <div class="about-text">
+                    <span class="section-tag">Sobre</span>
+                    <h2>Dra. Maria Cristina Bertoletti</h2>
+                    <p>Com mais de 20 anos de trajetória e constante atualização profissional, a Dra. Maria Cristina atende com foco nas reais necessidades de cada paciente.</p>
+                    <p>Para ela, a odontologia moderna vai além da técnica: começa por uma relação de confiança e empatia, com tempo para ouvir, explicar cada etapa do tratamento e cuidar de você com tranquilidade.</p>
                 </div>
-            </div>
-            <div class="about-img-container">
-                <img src="Foto consultório.jpg" alt="Consultório Dra. Maria Cristina" class="img-responsive">
-            </div>
-        </div>
-    </section>
-
-    <section id="tratamentos" class="services-section">
-        <div class="container text-center">
-            <span class="section-tag">Especialidades</span>
-            <h2>Tratamentos Personalizados</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Clareamento - antes e depois.jpeg" alt="Clareamento" class="card-img"></div>
-                    <div class="card-content"><h3>Odontologia Estética</h3><p>Clareamento e estética para um sorriso radiante.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Faceta e lente de contato dental.jpg" alt="Lentes" class="card-img"></div>
-                    <div class="card-content"><h3>Facetas e Lentes</h3><p>Transformação estética com naturalidade.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Profilaxia - limpeza.jpeg" alt="Profilaxia" class="card-img"></div>
-                    <div class="card-content"><h3>Odontologia Preventiva</h3><p>Check-ups e limpeza para manter sua saúde bucal.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Prótese dentaria.jpg" alt="Próteses" class="card-img"></div>
-                    <div class="card-content"><h3>Próteses Dentárias</h3><p>Reabilitação funcional e estética de qualidade.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Ortodontia.jpg" alt="Ortodontia" class="card-img"></div>
-                    <div class="card-content"><h3>Ortodontia</h3><p>Alinhamento do sorriso com técnicas modernas.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Implante dentario.jpg" alt="Implantes" class="card-img"></div>
-                    <div class="card-content"><h3>Implantes Dentários</h3><p>Segurança e durabilidade na reposição dentária.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Tratamento de canal - indicada pela Cris.jpg" alt="Canal" class="card-img"></div>
-                    <div class="card-content"><h3>Tratamento de Canal</h3><p>Endodontia precisa para preservar seus dentes.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Radiologia digital.jpeg" alt="Radiologia" class="card-img"></div>
-                    <div class="card-content"><h3>Radiologia Digital</h3><p>Exames precisos com tecnologia avançada.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Gengivoplastia.jpeg" alt="Gengivoplastia" class="card-img"></div>
-                    <div class="card-content"><h3>Gengivoplastia</h3><p>Harmonização do contorno gengival.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Extração dentária.jpeg" alt="Extração" class="card-img"></div>
-                    <div class="card-content"><h3>Cirurgias e Extrações</h3><p>Procedimentos seguros e humanizados.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Dentistica restauradora.jpg" alt="Restaurações" class="card-img"></div>
-                    <div class="card-content"><h3>Dentística Restauradora</h3><p>Recuperação da forma e função dos dentes.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Placa de bruxismo.jpeg" alt="Bruxismo" class="card-img"></div>
-                    <div class="card-content"><h3>Placa de Bruxismo</h3><p>Proteção e conforto para sua articulação.</p></div>
-                </div>
-                <div class="card">
-                    <div class="card-img-wrapper"><img src="Periodontia.jpeg" alt="Periodontia" class="card-img"></div>
-                    <div class="card-content"><h3>Periodontia</h3><p>Cuidados especializados com a saúde gengival.</p></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="diferenciais" class="features-section">
-        <div class="container grid-2">
-            <div class="features-img-container">
-                <img src="Foto consultório.jpg" alt="Estrutura do Consultório" class="img-responsive">
-            </div>
-            <div class="features-text">
-                <span class="section-tag">Estrutura Completa</span>
-                <h2>Conforto e Tecnologia ao seu Dispor</h2>
-                <ul class="features-list">
-                    <li>✓ Ambientes totalmente climatizados e aconchegantes.</li>
-                    <li>✓ Equipamentos modernos para diagnósticos precisos.</li>
-                    <li>✓ Atendimento pontual e individualizado.</li>
-                    <li>✓ Localização de fácil acesso.</li>
+                <ul class="badges">
+                    <li class="badge-item"><strong>+20 anos</strong><span>de trajetória na odontologia</span></li>
+                    <li class="badge-item"><strong>Atendimento individual</strong><span>com hora marcada e sem pressa</span></li>
+                    <li class="badge-item"><strong>Materiais de alta performance</strong><span>para resultados duradouros e naturais</span></li>
                 </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contato" class="contact-section">
-        <div class="container grid-2">
-            <div class="contact-info">
-                <span class="section-tag">Agendamento</span>
-                <h2>Vamos conversar?</h2>
-                <div class="info-blocks">
-                    <div class="info-block">
-                        <strong>📍 Endereço:</strong>
-                        <p>Rua Padre Chagas, 147 - sala 503 - Moinhos de Vento - Porto Alegre/RS</p>
-                    </div>
-                    <div class="info-block">
-                        <strong>💬 WhatsApp Direto:</strong>
-                        <p><a href="https://wa.me/5551999562211" target="_blank" class="link-highlight">Clique aqui para abrir o WhatsApp</a></p>
-                    </div>
+        <section id="tratamentos" class="services-section">
+            <div class="container">
+                <div class="text-center">
+                    <span class="section-tag">Especialidades</span>
+                    <h2>Tratamentos</h2>
+                    <p class="section-subtitle">Cuidado completo para a saúde e a estética do seu sorriso, em um só lugar.</p>
+                </div>
+
+                <h3 class="group-title">Estética do sorriso</h3>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="img/clareamento.jpg" alt="Antes e depois de clareamento dental" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Clareamento e estética</h4><p>Dentes mais claros e um sorriso harmonioso, com resultado natural.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/facetas-lentes.jpg" alt="Facetas e lentes de contato dental" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Facetas e lentes</h4><p>Correção de forma, cor e tamanho dos dentes com naturalidade.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/gengivoplastia.jpg" alt="Gengivoplastia" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Gengivoplastia</h4><p>Ajuste do contorno da gengiva para um sorriso mais equilibrado.</p></div>
+                    </article>
+                </div>
+
+                <h3 class="group-title">Prevenção e saúde bucal</h3>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="img/preventiva.jpg" alt="Limpeza e profilaxia dental" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Odontologia preventiva</h4><p>Check-ups e limpeza regulares para manter a saúde bucal em dia.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/periodontia.jpg" alt="Tratamento periodontal" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Periodontia</h4><p>Prevenção e tratamento de doenças da gengiva e dos tecidos de suporte.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/restauracoes.jpg" alt="Restauração dental" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Restaurações</h4><p>Recuperação da forma e da função dos dentes com materiais estéticos.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/placa-bruxismo.jpg" alt="Placa para bruxismo" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Placa de bruxismo</h4><p>Proteção dos dentes e mais conforto para quem range ou aperta os dentes.</p></div>
+                    </article>
+                </div>
+
+                <h3 class="group-title">Reabilitação</h3>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="img/implantes.jpg" alt="Implante dentário" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Implantes dentários</h4><p>Reposição de dentes perdidos com segurança e durabilidade.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/proteses.jpg" alt="Prótese dentária" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Próteses dentárias</h4><p>Reabilitação da mastigação e da estética do sorriso.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/tratamento-canal.jpg" alt="Tratamento de canal" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Tratamento de canal</h4><p>Endodontia precisa para preservar o dente natural.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/ortodontia.jpg" alt="Aparelho ortodôntico" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Ortodontia</h4><p>Alinhamento dos dentes e da mordida com técnicas modernas.</p></div>
+                    </article>
+                </div>
+
+                <h3 class="group-title">Cirurgia e diagnóstico</h3>
+                <div class="grid-3">
+                    <article class="card">
+                        <img src="img/cirurgias.jpg" alt="Cirurgia e extração dentária" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Cirurgias e extrações</h4><p>Procedimentos seguros, com atenção ao seu conforto.</p></div>
+                    </article>
+                    <article class="card">
+                        <img src="img/radiologia.jpg" alt="Radiografia digital odontológica" class="card-img" loading="lazy">
+                        <div class="card-content"><h4>Radiologia digital</h4><p>Exames de imagem precisos, com menor exposição à radiação.</p></div>
+                    </article>
                 </div>
             </div>
-            <div class="contact-form-box">
-                <form name="contato-clinica" method="POST" data-netlify="true" action="/sucesso.html" class="netlify-form">
-                    <input type="hidden" name="form-name" value="contato-clinica" />
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefone / WhatsApp</label>
-                        <input type="tel" id="phone" name="telefone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensagem ou Preferência de Horário</label>
-                        <textarea id="message" name="mensagem" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
-                </form>
+        </section>
+
+        <section id="consultorio" class="features-section">
+            <div class="container grid-2">
+                <div class="features-img">
+                    <img src="img/consultorio.jpg" alt="Consultório da Dra. Maria Cristina Bertoletti" width="1200" height="800" loading="lazy">
+                </div>
+                <div class="features-text">
+                    <span class="section-tag">O Consultório</span>
+                    <h2>Conforto e tecnologia a seu dispor</h2>
+                    <ul class="features-list">
+                        <li>Ambiente climatizado e acolhedor</li>
+                        <li>Equipamentos modernos para diagnósticos precisos</li>
+                        <li>Atendimento pontual e individualizado</li>
+                        <li>Localização de fácil acesso no Moinhos de Vento</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <div class="container grid-2">
+                <div class="contact-info">
+                    <span class="section-tag">Contato</span>
+                    <h2>Agende sua consulta</h2>
+                    <p class="contact-intro">Fale diretamente pelo WhatsApp ou envie uma mensagem pelo formulário. Retornamos o mais breve possível.</p>
+                    <ul class="info-blocks">
+                        <li>
+                            <strong>Endereço</strong>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Rua+Padre+Chagas+147+Porto+Alegre+RS" target="_blank" rel="noopener">Rua Padre Chagas, 147, sala 503<br>Moinhos de Vento · Porto Alegre/RS</a>
+                        </li>
+                        <li>
+                            <strong>WhatsApp e telefone</strong>
+                            <a href="https://wa.me/5551999562211?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">(51) 99956-2211</a>
+                        </li>
+                        <li>
+                            <strong>Instagram</strong>
+                            <a href="https://www.instagram.com/mcbertoletti" target="_blank" rel="noopener">@mcbertoletti</a>
+                        </li>
+                    </ul>
+                    <div class="map">
+                        <iframe title="Mapa: Rua Padre Chagas, 147, Porto Alegre" src="https://maps.google.com/maps?q=Rua%20Padre%20Chagas%2C%20147%2C%20Porto%20Alegre%20RS&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <h3>Envie uma mensagem</h3>
+                    <form name="contato-clinica" method="POST" data-netlify="true" netlify-honeypot="campo-extra" action="/sucesso.html">
+                        <input type="hidden" name="form-name" value="contato-clinica">
+                        <p class="hidden-field"><label>Não preencha este campo: <input name="campo-extra"></label></p>
+                        <div class="form-group">
+                            <label for="nome">Nome completo</label>
+                            <input type="text" id="nome" name="nome" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone / WhatsApp</label>
+                            <input type="tel" id="telefone" name="telefone" autocomplete="tel" placeholder="(51) 90000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem ou preferência de horário</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Enviar mensagem</button>
+                        <p class="form-note">Seus dados são usados apenas para retornarmos o seu contato.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer class="main-footer">
-        <div class="container text-center">
-            <p>&copy; 2026 Dra. Maria Cristina Bertoletti. CRO-RS 12396</p>
+        <div class="container footer-grid">
+            <div>
+                <p class="footer-name">Dra. Maria Cristina Bertoletti</p>
+                <p>Cirurgiã-dentista · CRO-RS 12396</p>
+            </div>
+            <div>
+                <p>Rua Padre Chagas, 147, sala 503</p>
+                <p>Moinhos de Vento · Porto Alegre/RS</p>
+            </div>
+            <div>
+                <p><a href="tel:+5551999562211">(51) 99956-2211</a></p>
+                <p><a href="https://www.instagram.com/mcbertoletti" target="_blank" rel="noopener">@mcbertoletti</a></p>
+            </div>
         </div>
+        <p class="footer-copy">&copy; 2026 Dra. Maria Cristina Bertoletti. Todos os direitos reservados.</p>
     </footer>
-    
-    <!-- ÍCONE WHATSAPP ATUALIZADO COM SÍMBOLO DO TELEFONE -->
-    <a href="https://wa.me/5551999562211" class="whatsapp-float" target="_blank">
-        <svg class="whatsapp-icon-svg" viewBox="0 0 448 512">
-            <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.6 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
-        </svg>
+
+    <a href="https://wa.me/5551999562211?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Conversar pelo WhatsApp">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-93.8-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.6 5.5-6.5 8.3-9.8 2.8-3.2 3.7-5.5 5.5-9.2 1.9-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 </body>
 </html>
